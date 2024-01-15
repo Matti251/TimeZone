@@ -12,12 +12,12 @@ const ContextState = ({ children }) => {
     JSON.parse(localStorage.getItem("addCart")) ||
       []
   );
-
   const fetchWishlist = async () => {
     const state = JSON.parse(
       (await localStorage.getItem("wishlist")) ??
         "[]"
     );
+
     setWishList(state);
   };
 

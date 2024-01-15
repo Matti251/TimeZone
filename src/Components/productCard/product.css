@@ -155,12 +155,15 @@ body {
   color: #ff9800;
   text-decoration: none;
 }
-.buy-btn:active {
-  color: #ff9800;
-}
+ .buy-btn:active {
+   color: #ff9800;
+} 
 .buy-btn:focus,
 .buy-btn:focus-visible {
   color: #ff9800;
+}
+#addBtn {
+  color: #ff9800 !important;
 }
 .wsk-btn {
   display: inline-block;

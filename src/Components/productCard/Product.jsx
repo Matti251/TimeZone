@@ -19,6 +19,27 @@ const Product = ({ item }) => {
   const isExist =
     wishList.find((it) => it.id === item.id) ??
     false;
+
+  const handleClick = (type) => {
+    if (type === "add") {
+      addStateToStorage("wishlist", item, () =>
+        fetchWishlist()
+      );
+      return;
+    }
+
+    const itemIndex = wishList.findIndex(
+      (ite) => ite.id === item.id
+    );
+    if (itemIndex !== -1) {
+      wishList.splice(itemIndex, 1);
+      localStorage.setItem(
+        "wishlist",
+        JSON.stringify(wishList)
+      );
+      fetchWishlist();
+    }
+  };
   return (
     <>
       <div className="shell">
@@ -68,19 +89,17 @@ const Product = ({ item }) => {
                           <FaHeart
                             className="buy-btn"
                             onClick={() =>
-                              alert("Remove")
+                              handleClick(
+                                "remove"
+                              )
                             }
+                            id="addBtn"
                           />
                         ) : (
                           <FaRegHeart
-                            className="buy-btn"
+                            className="buy-btn "
                             onClick={() =>
-                              addStateToStorage(
-                                "wishlist",
-                                item,
-                                () =>
-                                  fetchWishlist()
-                              )
+                              handleClick("add")
                             }
                           />
                         )}
