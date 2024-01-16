@@ -17,10 +17,8 @@ const ContextState = ({ children }) => {
       (await localStorage.getItem("wishlist")) ??
         "[]"
     );
-
     setWishList(state);
   };
-
   const fetchAddCart = async () => {
     const states = JSON.parse(
       (await localStorage.getItem("addCart")) ??
@@ -28,7 +26,6 @@ const ContextState = ({ children }) => {
     );
     setAddCart(states);
   };
-
   const fetchData = () => {
     axios
       .get(
@@ -66,6 +63,7 @@ const ContextState = ({ children }) => {
     }
     callback && callback();
   };
+
   return (
     <Context.Provider
       value={{

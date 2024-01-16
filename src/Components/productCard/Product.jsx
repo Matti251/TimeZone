@@ -5,10 +5,9 @@ import {
   FaHeart,
 } from "react-icons/fa";
 import { useUserContext } from "../../context/context";
-import { useNavigate } from "react-router";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Product = ({ item }) => {
-  const navigate = useNavigate();
   const {
     fetchWishlist,
     fetchAddCart,
@@ -42,7 +41,8 @@ const Product = ({ item }) => {
   };
   return (
     <>
-      <div className="shell">
+      <div className="shell"  data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
         <div className="container">
           <div className="row">
             <div className="col-md-3">
@@ -75,16 +75,13 @@ const Product = ({ item }) => {
                           item,
                           () => {
                             fetchAddCart();
-                            navigate("/addcart");
                           }
                         )
                       }>
                       Add Cart
                     </button>
                     <div className="wcf-right">
-                      <a
-                        href="#"
-                        className="buy-btn">
+                      <a className="buy-btn">
                         {isExist ? (
                           <FaHeart
                             className="buy-btn"
@@ -117,3 +114,4 @@ const Product = ({ item }) => {
 };
 
 export default Product;
+AOS.init();

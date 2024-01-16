@@ -1,7 +1,15 @@
-
 nav {
-    background: #fff 20% !important;
-    -webkit-box-shadow: 0 10px 15px rgba(25,25,25,0.1);
-    font-family: 'Josefin Sans', sans-serif;
-    z-index: 22222;
+  background: #fff 20% !important;
+  -webkit-box-shadow: 0 10px 15px
+    rgba(25, 25, 25, 0.1);
+  font-family: "Josefin Sans", sans-serif;
+  z-index: 22222;
 }
+.icons {
+  display: flex;
+}
+/* @media not all and(min-width: 768px) {
+  .icons {
+    display: none;
+  }
+} */

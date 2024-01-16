@@ -6,7 +6,7 @@ const Card = () => {
     <>
     <div className="main_card">
     <div className="slide-container flex flex-wrap gap-32  justify-center mt-24">
-        <div className="wrapper">
+        <div className="wrapper z-[-999]">
           <div className="clash-card barbarian">
             <div className="clash-card__image clash-card__image--barbarian">
               <img
@@ -52,7 +52,7 @@ const Card = () => {
             </div>
           </div>
         </div>
-        <div className="wrapper">
+        <div className="wrapper z-[-999]">
         <i className="fa-/"></i>
           <div className="clash-card archer">
             <div className="clash-card__image clash-card__image--archer">
@@ -98,7 +98,7 @@ const Card = () => {
             </div>
           </div>
         </div>
-        <div className="wrapper">
+        <div className="wrapper z-[-999]">
           <div className="clash-card giant">
             <div className="clash-card__image clash-card__image--giant">
               <img
@@ -143,7 +143,7 @@ const Card = () => {
             </div>
           </div>
         </div>
-        <div className="wrapper">
+        <div className="wrapper z-[-999]">
           <div className="clash-card goblin">
             <div className="clash-card__image clash-card__image--goblin">
               <img
@@ -191,7 +191,7 @@ const Card = () => {
             </div>
           </div>
         </div>
-        <div className="wrapper">
+        <div className="wrapper z-[-999]">
           <div className="clash-card wizard">
             <div className="clash-card__image clash-card__image--wizard">
               <img
