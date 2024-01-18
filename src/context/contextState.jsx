@@ -29,7 +29,7 @@ const ContextState = ({ children }) => {
   const fetchData = () => {
     axios
       .get(
-        "http://localhost:3000/api/products.json"
+        "/api/products.json"
       )
       .then((response) => {
         setData(response.data);
